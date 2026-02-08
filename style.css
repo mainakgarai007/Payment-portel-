@@ -23,10 +23,13 @@ body {
 .demo-banner {
   background: #fee2e2;
   color: #991b1b;
-  padding: 8px;
-  font-size: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
   border-radius: 6px;
   margin-bottom: 12px;
+  text-align: center;
+  border: 2px solid #fca5a5;
 }
 
 .section {
@@ -48,11 +51,11 @@ body {
   padding: 12px;
   display: none;
   gap: 10px;
+  flex-direction: column;
 }
 
 .section-body.show {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 }
 
 .option {
@@ -68,9 +71,90 @@ body {
   background: #f1f5f9;
 }
 
-.ghost {
-  opacity: 0.6;
-  pointer-events: none;
+/* Input styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pay-button {
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.pay-button:hover {
+  background: #2563eb;
+}
+
+.divider {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* UPI buttons grid */
+.section-body .option {
+  width: 100%;
 }
 
 /* Popup */
