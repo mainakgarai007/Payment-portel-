@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Payment Portal – Demo Only</title>
+  <title>Payment Options</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="page">
-  <h2 class="page-title">All Payment Options</h2>
+  <h2 class="page-title">Payment Options</h2>
 
   <!-- DEMO WARNING -->
   <div class="demo-banner">
-    ⚠️ DEMO PAYMENT PORTAL — This will always fail
+    DEMO PAYMENT PORTAL
   </div>
 
   <!-- UPI -->
@@ -24,10 +24,16 @@
     </div>
 
     <div class="section-body">
+      <div class="input-group">
+        <label>UPI ID</label>
+        <input type="text" placeholder="yourname@upi" class="input-field">
+        <button class="pay-button" onclick="payFail()">Pay with UPI ID</button>
+      </div>
+      <div class="divider">OR</div>
       <button class="option" onclick="payFail()">Google Pay</button>
       <button class="option" onclick="payFail()">PhonePe</button>
       <button class="option" onclick="payFail()">Paytm</button>
-      <button class="option ghost">Apps & More</button>
+      <button class="option" onclick="payFail()">Apps & More</button>
     </div>
   </div>
 
@@ -37,8 +43,27 @@
       <span>Cards</span>
       <span>⌄</span>
     </div>
-    <div class="section-body ghost">
-      Card payment disabled in demo
+    <div class="section-body">
+      <div class="input-group">
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9012 3456" class="input-field" maxlength="19">
+        
+        <div class="row">
+          <div class="col">
+            <label>Expiry (MM/YY)</label>
+            <input type="text" placeholder="MM/YY" class="input-field" maxlength="5">
+          </div>
+          <div class="col">
+            <label>CVV</label>
+            <input type="password" placeholder="123" class="input-field" maxlength="3">
+          </div>
+        </div>
+        
+        <label>Cardholder Name</label>
+        <input type="text" placeholder="Name on Card" class="input-field">
+        
+        <button class="pay-button" onclick="payFail()">Pay with Card</button>
+      </div>
     </div>
   </div>
 
@@ -48,8 +73,21 @@
       <span>Netbanking</span>
       <span>⌄</span>
     </div>
-    <div class="section-body ghost">
-      Netbanking disabled in demo
+    <div class="section-body">
+      <div class="input-group">
+        <label>Select Bank</label>
+        <select class="input-field">
+          <option>-- Select Your Bank --</option>
+          <option>State Bank of India</option>
+          <option>HDFC Bank</option>
+          <option>ICICI Bank</option>
+          <option>Axis Bank</option>
+          <option>Kotak Mahindra Bank</option>
+          <option>Punjab National Bank</option>
+          <option>Other Banks</option>
+        </select>
+        <button class="pay-button" onclick="payFail()">Proceed to Netbanking</button>
+      </div>
     </div>
   </div>
 
@@ -59,8 +97,22 @@
       <span>EMI</span>
       <span>⌄</span>
     </div>
-    <div class="section-body ghost">
-      EMI not available in demo
+    <div class="section-body">
+      <div class="input-group">
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9012 3456" class="input-field" maxlength="19">
+        
+        <label>Select EMI Tenure</label>
+        <select class="input-field">
+          <option>-- Select Tenure --</option>
+          <option>3 Months EMI</option>
+          <option>6 Months EMI</option>
+          <option>9 Months EMI</option>
+          <option>12 Months EMI</option>
+        </select>
+        
+        <button class="pay-button" onclick="payFail()">Proceed with EMI</button>
+      </div>
     </div>
   </div>
 
@@ -70,8 +122,23 @@
       <span>Wallet</span>
       <span>⌄</span>
     </div>
-    <div class="section-body ghost">
-      Wallet disabled in demo
+    <div class="section-body">
+      <div class="input-group">
+        <label>Select Wallet</label>
+        <select class="input-field">
+          <option>-- Select Wallet --</option>
+          <option>Paytm Wallet</option>
+          <option>PhonePe Wallet</option>
+          <option>Mobikwik</option>
+          <option>Freecharge</option>
+          <option>Amazon Pay</option>
+        </select>
+        
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="10-digit mobile number" class="input-field" maxlength="10">
+        
+        <button class="pay-button" onclick="payFail()">Pay with Wallet</button>
+      </div>
     </div>
   </div>
 
@@ -81,10 +148,7 @@
 <div id="popup" class="popup">
   <div class="popup-box">
     <h3>❌ Payment Failed</h3>
-    <p>
-      This is a demo payment portal.<br>
-      No money was deducted.
-    </p>
+    <p>Try again later.</p>
     <button onclick="closePopup()">OK</button>
   </div>
 </div>
