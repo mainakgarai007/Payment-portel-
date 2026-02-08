@@ -8,49 +8,87 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>⚠️ PAYMENT PORTAL – DEMO ONLY</h1>
+<div class="page">
+  <h2 class="page-title">All Payment Options</h2>
 
-    <p class="subtitle">
-      This is a demonstration payment page.<br>
-      No real payment is possible. This demo will always fail.
-    </p>
-
-    <div class="warning-box">
-      🚫 Do NOT enter real card, UPI, or bank details.
-    </div>
-
-    <button class="pay-btn paytm" onclick="openApp('paytm')">
-      Paytm (Demo)
-    </button>
-
-    <button class="pay-btn phonepe" onclick="openApp('phonepe')">
-      PhonePe (Demo)
-    </button>
-
-    <button class="pay-btn gpay" onclick="openApp('gpay')">
-      Google Pay (Demo)
-    </button>
-
-    <p class="note">
-      Clicking a button may open the app.<br>
-      <b>No transaction will ever occur.</b>
-    </p>
+  <!-- DEMO WARNING -->
+  <div class="demo-banner">
+    ⚠️ DEMO PAYMENT PORTAL — This will always fail
   </div>
 
-  <!-- FAIL POPUP -->
-  <div id="popup" class="popup">
-    <div class="popup-box">
-      <h2 class="fail">❌ Payment Failed (Demo Only)</h2>
-      <p>
-        This payment attempt was intentionally failed.<br>
-        No money was deducted.<br>
-        No data was collected.
-      </p>
-      <button onclick="closePopup()">OK</button>
+  <!-- UPI -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span>UPI</span>
+      <span>⌄</span>
+    </div>
+
+    <div class="section-body">
+      <button class="option" onclick="payFail()">Google Pay</button>
+      <button class="option" onclick="payFail()">PhonePe</button>
+      <button class="option" onclick="payFail()">Paytm</button>
+      <button class="option ghost">Apps & More</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Cards -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span>Cards</span>
+      <span>⌄</span>
+    </div>
+    <div class="section-body ghost">
+      Card payment disabled in demo
+    </div>
+  </div>
+
+  <!-- Netbanking -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span>Netbanking</span>
+      <span>⌄</span>
+    </div>
+    <div class="section-body ghost">
+      Netbanking disabled in demo
+    </div>
+  </div>
+
+  <!-- EMI -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span>EMI</span>
+      <span>⌄</span>
+    </div>
+    <div class="section-body ghost">
+      EMI not available in demo
+    </div>
+  </div>
+
+  <!-- Wallet -->
+  <div class="section">
+    <div class="section-header" onclick="toggle(this)">
+      <span>Wallet</span>
+      <span>⌄</span>
+    </div>
+    <div class="section-body ghost">
+      Wallet disabled in demo
+    </div>
+  </div>
+
+</div>
+
+<!-- FAIL POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h3>❌ Payment Failed</h3>
+    <p>
+      This is a demo payment portal.<br>
+      No money was deducted.
+    </p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
