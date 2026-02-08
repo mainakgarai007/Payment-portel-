@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Portal – Demo Only</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>⚠️ PAYMENT PORTAL – DEMO ONLY</h1>
+
+    <p class="subtitle">
+      This is a demonstration payment page.<br>
+      No real payment is possible. This demo will always fail.
+    </p>
+
+    <div class="warning-box">
+      🚫 Do NOT enter real card, UPI, or bank details.
+    </div>
+
+    <button class="pay-btn paytm" onclick="openApp('paytm')">
+      Paytm (Demo)
+    </button>
+
+    <button class="pay-btn phonepe" onclick="openApp('phonepe')">
+      PhonePe (Demo)
+    </button>
+
+    <button class="pay-btn gpay" onclick="openApp('gpay')">
+      Google Pay (Demo)
+    </button>
+
+    <p class="note">
+      Clicking a button may open the app.<br>
+      <b>No transaction will ever occur.</b>
+    </p>
+  </div>
+
+  <!-- FAIL POPUP -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <h2 class="fail">❌ Payment Failed (Demo Only)</h2>
+      <p>
+        This payment attempt was intentionally failed.<br>
+        No money was deducted.<br>
+        No data was collected.
+      </p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
