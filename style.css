@@ -1,74 +1,76 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
-  background: #0f172a;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #f8fafc;
+  color: #0f172a;
 }
 
-.container {
-  background: #020617;
-  padding: 24px;
-  border-radius: 14px;
-  width: 90%;
+.page {
   max-width: 420px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  margin: auto;
+  padding: 16px;
 }
 
-h1 {
-  color: #f87171;
-  margin-bottom: 8px;
+.page-title {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 15px;
+.demo-banner {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
-.warning-box {
-  background: #1e293b;
-  border-left: 4px solid #ef4444;
-  padding: 10px;
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.pay-btn {
-  width: 100%;
-  padding: 14px;
-  margin-top: 12px;
-  border: none;
+.section {
+  background: #ffffff;
   border-radius: 10px;
-  font-size: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.section-header {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
   cursor: pointer;
-  color: #ffffff;
+  font-weight: 500;
 }
 
-.paytm {
-  background: #00baf2;
+.section-body {
+  padding: 12px;
+  display: none;
+  gap: 10px;
 }
 
-.phonepe {
-  background: #5f259f;
+.section-body.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.gpay {
-  background: #1a73e8;
+.option {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.note {
-  margin-top: 15px;
-  font-size: 13px;
-  opacity: 0.8;
+.option:hover {
+  background: #f1f5f9;
+}
+
+.ghost {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 /* Popup */
@@ -76,28 +78,21 @@ h1 {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0,0,0,0.5);
   align-items: center;
   justify-content: center;
 }
 
 .popup-box {
-  background: #020617;
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
-  width: 90%;
-  max-width: 320px;
+  width: 85%;
+  max-width: 300px;
   text-align: center;
 }
 
 .popup-box button {
-  margin-top: 12px;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.fail {
-  color: #ef4444;
+  margin-top: 10px;
+  padding: 8px 16px;
 }
